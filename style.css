@@ -280,16 +280,6 @@ Voice
   margin-bottom: 140px;
 }
 
-.circle-top {
-  padding: 1px;
-  width: 515px;
-  height: 119px;
-  border-top-left-radius: 800px;
-  border-top-right-radius: 800px;
-  margin: 0 auto;
-  background: pink;
-}
-
 .user {
   display: flex;
   justify-content: center;
