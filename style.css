@@ -21,6 +21,15 @@ a {
   color: inherit;
 }
 
+#page-top {
+  width: 64px;
+  height: 64px;
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  z-index: 10;
+}
+
 /*----------------------------
 Header
 -----------------------------*/
@@ -40,6 +49,7 @@ Header
 
 .header-logo {
   width: 240px;
+  flex-shrink: 0;
 }
 
 .nav-list {
@@ -51,6 +61,7 @@ Header
   font-size: 14px;
   margin-left: 40px;
   color: white;
+  white-space: nowrap;
 }
 
 .nav-btn {
@@ -72,7 +83,6 @@ Main Visual
 .top-text {
   display: flex;
   width: 20%;
-  /* height: auto; */
   writing-mode: vertical-rl;
   justify-content: center;
   align-items: center;
@@ -80,6 +90,33 @@ Main Visual
   color: #468459;
   letter-spacing: 15px;
   font-family: "Shippori Mincho";
+}
+
+.top-text::before {
+  content: "";
+  display: inline-block;
+  width: 146px;
+  height: 133px;
+  background-image: url('images/backgroundimage3.png');
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  top: 95px;
+  left: 20px;
+}
+
+.top-text::after {
+  content: "";
+  display: inline-block;
+  width: 122px;
+  height: 111px;
+  background-image: url('images/backgroundimage2.png');
+  background-position: center;
+  background-size: contain;
+  position: relative;
+  top: -120px;
+  right: 30px;
+  transform: rotate(-20deg);
 }
 
 .line {
@@ -108,9 +145,23 @@ Main Visual
 }
 
 .top-carousel img {
-  border-top-left-radius: 10% 50%;
-  border-bottom-left-radius: 20% 80%;
+  min-height: 584px;
+  /* object-fit: cover; */
 }
+
+/* .top-carousel::before {
+  content: "";
+  display: inline-block;
+  width: 719px;
+  height: 616px;
+  background-color: red;
+  background-image: url("images/_x31_3.png");
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: -184px;
+  left: 268px;
+} */
 
 /*----------------------------
  Information
@@ -152,6 +203,21 @@ Concept
 
 #concept {
   margin-bottom: 151px;
+  position: relative;
+}
+
+#concept h3::before {
+  content: "";
+  display: inline-block;
+  width: 530px;
+  height: 134px;
+  background-image: url('images/Title.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 90px;
+  left: 130px;
 }
 
 .container {
@@ -196,6 +262,22 @@ Concept
   position: relative;
 }
 
+#concept::after {
+  content: "";
+  display: inline-block;
+  width: 440px;
+  height: 336px;
+  background-image: url('images/BGicon.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* background: pink; */
+  right: 0;
+  bottom: -100px;
+  z-index: 1;
+}
+
 .frame-3 {
   width: 146px;
   height: 146px;
@@ -225,7 +307,37 @@ Corse
 -----------------------------*/
 
 #corse {
-  margin-bottom: 167px;
+  padding-bottom: 167px;
+  background: #f0f5e1;
+  position: relative;
+  z-index: -2;
+}
+
+#corse::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 140px;
+  background-image: url('images/Frame\ 2564.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#corse::after {
+  content: "";
+  display: inline-block;
+  width: 440px;
+  height: 336px;
+  background-image: url('images/BGicon.png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  /* background: pink; */
+  right: 0;
+  bottom: 10px;
+  z-index: 1;
 }
 
 .title {
@@ -246,6 +358,21 @@ Corse
 .corse-img {
   border-radius: 15px;
   margin-bottom: 32px;
+}
+
+.insurance::before {
+  content: "";
+  display: inline-block;
+  width: 530px;
+  height: 134px;
+  background-image: url('images/Title\ \(2\).png');
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 225px;
+  left: 115px;
+  z-index: -1;
 }
 
 .insurance h4,
@@ -280,6 +407,36 @@ Voice
   margin-bottom: 140px;
 }
 
+/* .semicircle::before {
+  content: "";
+  display: inline-block;
+  width: 515;
+  height: 119px;
+  background-image: url('images/Subtract.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: -119px;
+  z-index: 100;
+} */
+
+.semicircle {
+  background: #fff;
+  width        : 515px;
+  height       : 119px;
+  background   : linear-gradient(to bottom);
+  border-radius: 50%/85% 85% 5% 5%;
+  transform    : rotate(0deg);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -70px;
+}
+
+
 .user {
   display: flex;
   justify-content: center;
@@ -308,6 +465,22 @@ Voice
 /*----------------------------
 Access
 -----------------------------*/
+
+#access {
+  background: #f0f5e1;
+}
+
+#access::before {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 140px;
+  background-color: red;
+  background-image: url('images/Frame\ 2564.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .access {
   display: flex;
@@ -372,6 +545,10 @@ table td {
 Footer
 -----------------------------*/
 
+#footer {
+  background: #f0f5e1;
+}
+
 .footer-inner {
   display: flex;
   max-width: 75%;
@@ -401,4 +578,22 @@ Footer
   text-align: center;
   font-size: 12px;
   padding: 11px 0;
+}
+
+
+
+/*----------------------------
+ About.html
+-----------------------------*/
+
+/* Main visual */
+
+.about-title {
+  width: 20%;
+  height: auto;
+  text-align: center;
+}
+
+.about-title p {
+  align-items: center;
 }
