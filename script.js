@@ -6,7 +6,7 @@ $(function() {
     speed: 1500,
     fade: true,
     dots: false,
-    aroows: false,
+    arrows: false,
     infinite: true,
   });
 });
@@ -18,7 +18,7 @@ $(function() {
     speed: 1500,
     fade: true,
     dots: false,
-    aroows: false,
+    arrows: false,
     infinite: true,
   });
 });

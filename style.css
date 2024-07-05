@@ -30,6 +30,32 @@ a {
   z-index: 10;
 }
 
+.btn {
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  padding: 3px 24px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+
+.section-title {
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 64px;
+  color: #468459;
+  width: 400px;
+}
+
+.section-title span {
+  padding: 0 18px;
+}
+
+.title-header {
+  margin-bottom: 20px;
+}
+
 /*----------------------------
 Header
 -----------------------------*/
@@ -65,9 +91,14 @@ Header
 }
 
 .nav-btn {
-  padding: 12.5px 16px;
-  background-color: #468459;
-  border-radius: 5%;
+  display: flex;
+  align-items: center;
+  padding: 2px 16px;
+  background-color: #0c4324;
+  border-radius: 4px;
+  width: 172px;
+  height: 44px;
+  font-size: 14px;
 }
 
 
@@ -146,22 +177,21 @@ Main Visual
 
 .top-carousel img {
   min-height: 584px;
-  /* object-fit: cover; */
 }
 
-/* .top-carousel::before {
+.top-carousel::before {
   content: "";
   display: inline-block;
   width: 719px;
-  height: 616px;
-  background-color: red;
+  height: 580px;
   background-image: url("images/_x31_3.png");
-  background-position: center;
+  /* background-position: center; */
   background-size: cover;
   position: absolute;
-  top: -184px;
-  left: 268px;
-} */
+  top: 0;
+  left: -32px;
+  z-index: -1;
+}
 
 /*----------------------------
  Information
@@ -176,25 +206,62 @@ Main Visual
   margin-bottom: 120px;
 }
 
-.news {
+.info {
   display: flex;
   align-items: flex-end;
 }
 
-.news-item {
-  margin-left: 20px;
-  font-size: 14px;
+.news {
+  display: flex;
+  margin-right: 45px;
+  align-items: flex-end;
+  white-space: nowrap;
 }
 
 .news-title {
   font-size: 24px;
+  font-weight: bold;
   color: #468459;
+  margin-right: 10px;
+  line-height: 1;
+  vertical-align: bottom;
 }
 
-.news-btn {
+.news-item {
+  line-height: 1;
+  font-size: 14px;
+  color: #468459;
+  vertical-align: bottom;
+}
+
+.business-hours {
+  display: flex;
+  align-items: flex-end;
+  white-space: nowrap;
+  font-size: 14px;
+}
+
+.date {
+  line-height: 1;
+  font-size: 14px;
+  margin-right: 16px;
+  vertical-align: bottom;
+}
+
+.date-btn {
   background-color: #468459;
   color: #fff;
+  border-radius: 4px;
   padding: 4px 12px;
+  line-height: 1;
+  font-size: 14px;
+  vertical-align: bottom;
+}
+
+.info-list {
+  font-size: 14px;
+  line-height: 1;
+  vertical-align: bottom;
 }
 
 /*----------------------------
@@ -216,8 +283,8 @@ Concept
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  top: 90px;
-  left: 130px;
+  top: 105px;
+  left: 145px;
 }
 
 .container {
@@ -229,7 +296,7 @@ Concept
 }
 
 .container-left {
-  width: 40%;
+  width: 45%;
 }
 
 .container-left h2 {
@@ -248,18 +315,22 @@ Concept
   margin-bottom: 16px;
 }
 
-.btn {
+.c-btn {
   width: 154.25px;
-  font-size: 14px;
-  text-align: center;
-  padding: 5.5px 0;
-  border: 1px solid #000;
-  border-radius: 5px;
+  height: 32px;
+  margin-left: 149px;
+  margin-top: 24px;
 }
 
 .container-right {
   width: 50%;
   position: relative;
+}
+
+.concept-img {
+  width: 400px;
+  height: 507px;
+  margin: 61px 0;
 }
 
 #concept::after {
@@ -272,34 +343,9 @@ Concept
   background-size: contain;
   background-repeat: no-repeat;
   position: absolute;
-  /* background: pink; */
   right: 0;
   bottom: -100px;
-  z-index: 1;
-}
-
-.frame-3 {
-  width: 146px;
-  height: 146px;
-  position: absolute;
-  top: 61px;
-  right: 65px;
-  z-index: 10;
-}
-
-.frame-2 {
-  width: 291px;
-  height: 371px;
-  position: absolute;
-  top: 118px;
-  right: 109px;
-}
-
-.frame-1 {
-  width: 146px;
-  position: absolute;
-  top: 379px;
-  right: 30px;
+  z-index: -1;
 }
 
 /*----------------------------
@@ -329,7 +375,7 @@ Corse
   display: inline-block;
   width: 440px;
   height: 336px;
-  background-image: url('images/BGicon.png');
+  background-image: url('images/BGicon\ \(2\).png');
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -337,27 +383,16 @@ Corse
   /* background: pink; */
   right: 0;
   bottom: 10px;
-  z-index: 1;
-}
-
-.title {
-  text-align: center;
-  margin: 0 auto;
-  margin-bottom: 64px;
-  color: #468459;
-}
-
-.title span {
-  padding: 0 18px;
-}
-
-.title-header {
-  margin-bottom: 20px;
+  z-index: -1;
 }
 
 .corse-img {
   border-radius: 15px;
   margin-bottom: 32px;
+}
+
+.corse-btn {
+  text-align: center;
 }
 
 .insurance::before {
@@ -393,24 +428,23 @@ Corse
   margin-bottom: 32px;
 }
 
-.btn {
-  margin: 0 auto;
-}
-
-
-
 /*----------------------------
 Voice
 -----------------------------*/
 
 #voice {
   margin-bottom: 140px;
+  position: relative;
 }
 
-/* .semicircle::before {
+.semicircle {
+  position: relative;
+}
+
+.semicircle::before {
   content: "";
   display: inline-block;
-  width: 515;
+  width: 515px;
   height: 119px;
   background-image: url('images/Subtract.png');
   background-position: center;
@@ -418,24 +452,17 @@ Voice
   background-repeat: no-repeat;
   position: absolute;
   top: -119px;
-  z-index: 100;
-} */
-
-.semicircle {
-  background: #fff;
-  width        : 515px;
-  height       : 119px;
-  background   : linear-gradient(to bottom);
-  border-radius: 50%/85% 85% 5% 5%;
-  transform    : rotate(0deg);
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  top: -70px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
+/* .voice-title {
+  position: absolute;
+  left: 50%;
+  top: 130px;
+  transform: translateX(-50%);
+} */
 
 .user {
   display: flex;
@@ -460,6 +487,10 @@ Voice
 .circle {
   border-radius: 50%;
   margin-bottom: 32px;
+}
+
+.voice-btn {
+  text-align: center;
 }
 
 /*----------------------------
@@ -493,6 +524,10 @@ Access
 .access-left,
 .access-right {
   width: 50%;
+}
+
+.access iframe {
+  width: 100%;
 }
 
 
@@ -552,6 +587,7 @@ Footer
 .footer-inner {
   display: flex;
   max-width: 75%;
+  height: 36px;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
@@ -563,12 +599,10 @@ Footer
   justify-content: space-between;
 }
 
-/* .footer-logo {
-  margin-right: 45px;
-} */
-
 .footer-list li {
   margin-right: 40px;
+  /* white-space: nowrap; */
+
 }
 
 .copyright {
