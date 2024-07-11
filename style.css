@@ -69,17 +69,19 @@ Header
   height: 64px;
   align-items: center;
   z-index: 10;
-  padding: 0 32px;
+  /* padding: 0 32px; */
 }
 
 .header-logo {
   width: 240px;
   flex-shrink: 0;
+  margin-left: 32px;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
+  margin-right: 32px;
 }
 
 .nav-list li {
@@ -98,6 +100,7 @@ Header
   width: 172px;
   height: 44px;
   font-size: 14px;
+  color: #fff;
 }
 
 
@@ -128,7 +131,7 @@ Main Visual
   display: inline-block;
   width: 146px;
   height: 133px;
-  background-image: url('images/backgroundimage3.png');
+  background-image: url('images/top/backgroundimage3.png');
   background-position: center;
   background-size: contain;
   position: relative;
@@ -141,7 +144,7 @@ Main Visual
   display: inline-block;
   width: 122px;
   height: 111px;
-  background-image: url('images/backgroundimage2.png');
+  background-image: url('images/top/backgroundimage2.png');
   background-position: center;
   background-size: contain;
   position: relative;
@@ -184,7 +187,7 @@ Main Visual
   display: inline-block;
   width: 719px;
   height: 580px;
-  background-image: url("images/_x31_3.png");
+  background-image: url("images/top/_x31_3.png");
   /* background-position: center; */
   background-size: cover;
   position: absolute;
@@ -999,11 +1002,67 @@ select {
 }
 
 /*----------------------------
-スマホスタイル
+スマホ
 -----------------------------*/
 
-@media (min-width: 1040px) {
+/* spメニュー */
+
+#menu-sp {
+  position: absolute;
+  top: 20px;
+  right: 18px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+#nav-sp {
+  width: 320px;
+  background: #fff;
+  opacity: 0.9;
+  position: absolute;
+  right: 0;
+  z-index: 10;
+  display: none;
+  transform: translateX(100%);
+  transition: transform 0.5s ease;
+}
+
+#nav-sp.open {
+  display: block;
+  transform: translateX(0);
+}
+
+.nav-sp-header {
+  display: flex;
+  padding: 20px 16px;
+  gap: 25%;
+  align-items: center;
+}
+
+.nav-sp-list-inner {
+  padding: 0 32px;
+}
+
+#close {
+  cursor: pointer;
+}
+
+.nav-sp-list-inner h3 {
+  font-size: 24px;
+  color: #0c4324;
+  margin-bottom: 16px;
+}
+
+.nav-sp-list-inner li {
+  margin-bottom: 32px;
+}
+
+@media (min-width: 1041px) {
   #menu-sp {
+    display: none;
+  }
+
+  #nav-sp {
     display: none;
   }
 }
@@ -1012,4 +1071,10 @@ select {
   .header-nav {
     display: none;
   }
+/*
+  .header-logo {
+    display: none;
+  } */
+
+
 }

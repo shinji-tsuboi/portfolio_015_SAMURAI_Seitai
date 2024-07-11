@@ -11,6 +11,21 @@ $(function() {
   });
 });
 
+// メニューボタンとナビゲーションメニューの要素を取得
+const menuButton = document.getElementById('menu-sp');
+const navMenu = document.getElementById('nav-sp');
+const closeButton = document.getElementById('close');
+
+// メニューボタンクリック時にメニューを表示
+menuButton.addEventListener('click', () => {
+  navMenu.classList.add('open');
+});
+
+// クローズボタンクリック時にメニューを非表示
+closeButton.addEventListener('click', () => {
+  navMenu.classList.remove('open');
+});
+
 $(function() {
   $('.bottom-carousel').slick({
     autoplay: true,
