@@ -188,7 +188,6 @@ Main Visual
   width: 719px;
   height: 580px;
   background-image: url("images/top/_x31_3.png");
-  /* background-position: center; */
   background-size: cover;
   position: absolute;
   top: 0;
@@ -196,6 +195,24 @@ Main Visual
   z-index: -1;
 }
 
+.progress-bar {
+  width: 60px;
+  height: 6px;
+  background: #fff;
+  position: absolute;
+  bottom: 32px;
+  right: 60px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.progress-bar .bar {
+  width: 0%;
+  height: 6px;
+  background: #468459;
+  border-radius: 4px;
+
+}
 /*----------------------------
  Information
 -----------------------------*/

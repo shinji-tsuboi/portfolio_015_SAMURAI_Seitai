@@ -1,4 +1,5 @@
 
+// スライダー設定
 $(function() {
   $('.top-carousel').slick({
     autoplay: true,
@@ -9,7 +10,20 @@ $(function() {
     arrows: false,
     infinite: true,
   });
+  // プログレスバー設定
+  $('.top-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+    $('#js-progressBar').stop(true, true).css('width', '0%');
+  });
+
+  $('.top-carousel').on('afterChange', function(event, slick, currentSlide) {
+    $('#js-progressBar').animate({ width: '100%' }, 5000, 'linear');
+  });
+
+  $('#js-progressBar').animate({ width: '100%'}, 5000, 'linear');
 });
+
+
+
 
 // メニューボタンとナビゲーションメニューの要素を取得
 const menuButton = document.getElementById('menu-sp');
