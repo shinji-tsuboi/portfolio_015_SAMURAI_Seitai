@@ -1,7 +1,7 @@
 
 // スライダー設定
 $(function() {
-  $('.top-carousel').slick({
+  $('.top-carousel, .top-carousel-sp').slick({
     autoplay: true,
     autoplaySpeed: 5000,
     speed: 1500,
@@ -11,14 +11,18 @@ $(function() {
     infinite: true,
   });
   // プログレスバー設定
+
+  // スライドが切り替わるたびにプログレスバーをリセット
   $('.top-carousel').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
     $('#js-progressBar').stop(true, true).css('width', '0%');
   });
 
+  // スライドが開始されたらプログレスバーをアニメーション
   $('.top-carousel').on('afterChange', function(event, slick, currentSlide) {
     $('#js-progressBar').animate({ width: '100%' }, 5000, 'linear');
   });
 
+  // 初回スライドの開始時にプログレスバーをアニメーション
   $('#js-progressBar').animate({ width: '100%'}, 5000, 'linear');
 });
 
@@ -40,8 +44,9 @@ closeButton.addEventListener('click', () => {
   navMenu.classList.remove('open');
 });
 
+// スライダー設定
 $(function() {
-  $('.bottom-carousel').slick({
+  $('.bottom-carousel, .bottom-carousel-sp').slick({
     autoplay: true,
     autoplaySpeed: 5000,
     speed: 1500,

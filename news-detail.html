@@ -16,22 +16,36 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
   <title>SAMURAI整体院</title>
 </head>
 
 <body>
-  <header id="header">
+  <header class="header-sp">
     <h1 class="header-logo">
       <a href="#header"><img src="images/header-logo.png" alt="SAMURAI整体院"></a>
     </h1>
     <nav class="header-nav">
       <ul class="nav-list">
-        <li><a href="top.html">ホーム</a></li>
-        <li><a href="about.html">当院について</a></li>
-        <li><a href="corse.html">コース・料金</a></li>
-        <li><a href="information.html">お知らせ</a></li>
-        <li><a href="voice.html">お客様の声</a></li>
-        <li class="nav-btn"><a href="contact.html">ご予約・お問い合わせ</a></li>
+        <li class="nav-item">
+          <a href="top.html">ホーム</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html">当院について</a>
+        </li>
+        <li class="nav-item">
+          <a href="course.html">コース・料金</a>
+        </li>
+        <li class="nav-item">
+          <a href="news.html">お知らせ</a>
+        </li>
+        <li class="nav-item">
+          <a href="voice.html">お客様の声</a>
+        </li>
+        <li class="nav-btn">
+          <a href="contact.html">ご予約・お問い合わせ</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -54,8 +68,8 @@
          <ul>
            <li><a href="top.html">ホーム</a></li>
            <li><a href="about.html">当院について</a></li>
-           <li><a href="corse.html">コース・料金</a></li>
-           <li><a href="information.html">お知らせ</a></li>
+           <li><a href="course.html">コース・料金</a></li>
+           <li><a href="news.html">お知らせ</a></li>
            <li><a href="voice.html">お客様の声</a></li>
            <li class="nav-btn"><a href="contact.html">ご予約・お問い合わせ</a></li>
          </ul>
@@ -66,17 +80,33 @@
   <main>
     <!-- メインビジュアル -->
     <div class="main-visual">
+      <!-- PC用メインビジュアル -->
       <div class="about-img">
-        <img src="images/information/Frame 2629.png" alt="">
+        <img src="images/news/Frame 2629.png" alt="当院について">
+      </div>
+      <!-- SP用メインビジュアル -->
+      <div class="about-img-sp">
+        <img src="images/top-img-sp/news-sp.png" alt="当院について">
       </div>
     </div>
 
-    <!-- お知らせ -->
-    <div id="information">
-      <div id="home">
-        <p class="home">ホーム<span>></span></p>
-        <p class="home">お知らせ詳細</p>
-      </div>
+    <!-- パンくずリスト -->
+    <div class="breaderum">
+      <ul class="page-map">
+        <li class="page-map__top">
+          <a href="top.html">ホーム</a>
+        </li>
+        <li class="page-map__about">
+          <a href="news.html">
+          <span>></span>
+          お知らせ</a>
+        </li>
+        <li class="page-map__about">
+          <a href="news-detail.html">
+          <span>></span>
+          お知らせ詳細</a>
+        </li>
+      </ul>
     </div>
 
     <!-- Topic -->
@@ -93,7 +123,7 @@
               </div>
             </div>
             <div class="detail-img">
-              <img src="images/information/Topic1.png">
+              <img src="images/news/Topic1.png">
             </div>
           </div>
           <div class="detail-text">
@@ -219,8 +249,8 @@
           <ul class="footer-list">
             <li><a href="top.html">TOP</a></li>
             <li><a href="concept.html">当院について</a></li>
-            <li><a href="corse.html">コース・料金</a></li>
-            <li><a href="information.html">お知らせ</a></li>
+            <li><a href="course.html">コース・料金</a></li>
+            <li><a href="news.html">お知らせ</a></li>
             <li><a href="voice.html">お客様の声</a></li>
             <li><a href="contact.html">ご予約・お問い合わせ</a></li>
           </ul>

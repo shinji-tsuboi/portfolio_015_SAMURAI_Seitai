@@ -16,22 +16,36 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Shippori+Mincho&display=swap">
 
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="responsive.css">
+
   <title>SAMURAI整体院</title>
 </head>
 
 <body>
-  <header id="header">
+  <header class="header-sp">
     <h1 class="header-logo">
       <a href="#header"><img src="images/header-logo.png" alt="SAMURAI整体院"></a>
     </h1>
     <nav class="header-nav">
       <ul class="nav-list">
-        <li><a href="top.html">ホーム</a></li>
-        <li><a href="about.html">当院について</a></li>
-        <li><a href="corse.html">コース・料金</a></li>
-        <li><a href="information.html">お知らせ</a></li>
-        <li><a href="voice.html">お客様の声</a></li>
-        <li class="nav-btn"><a href="contact.html">ご予約・お問い合わせ</a></li>
+        <li class="nav-item">
+          <a href="top.html">ホーム</a>
+        </li>
+        <li class="nav-item">
+          <a href="about.html">当院について</a>
+        </li>
+        <li class="nav-item">
+          <a href="course.html">コース・料金</a>
+        </li>
+        <li class="nav-item">
+          <a href="news.html">お知らせ</a>
+        </li>
+        <li class="nav-item">
+          <a href="voice.html">お客様の声</a>
+        </li>
+        <li class="nav-btn">
+          <a href="contact.html">ご予約・お問い合わせ</a>
+        </li>
       </ul>
     </nav>
   </header>
@@ -54,8 +68,8 @@
          <ul>
            <li><a href="top.html">ホーム</a></li>
            <li><a href="about.html">当院について</a></li>
-           <li><a href="corse.html">コース・料金</a></li>
-           <li><a href="information.html">お知らせ</a></li>
+           <li><a href="course.html">コース・料金</a></li>
+           <li><a href="news.html">お知らせ</a></li>
            <li><a href="voice.html">お客様の声</a></li>
            <li class="nav-btn"><a href="contact.html">ご予約・お問い合わせ</a></li>
          </ul>
@@ -64,31 +78,48 @@
    </nav>
 
   <main>
-    <!-- メインビジュアル -->
-    <div class="main-visual">
+     <!-- メインビジュアル -->
+     <div class="main-visual">
+      <!-- PC用メインビジュアル -->
       <div class="about-img">
-        <img src="images/price/Frame 2627.png" alt="">
+        <img src="images/price/Frame 2627.png" alt="当院について">
+      </div>
+      <!-- SP用メインビジュアル -->
+      <div class="about-img-sp">
+        <img src="images/top-img-sp/price-sp.png" alt="当院について">
       </div>
     </div>
 
-    <!-- お知らせ -->
-    <div id="information">
-      <div id="home">
-        <p class="home">ホーム<span>></span></p>
-        <p class="home">コース・料金</p>
-      </div>
+    <!-- パンくずリスト -->
+    <div class="breaderum">
+      <ul class="page-map">
+        <li class="page-map__top">
+          <a href="top.html">ホーム</a>
+        </li>
+        <li class="page-map__about">
+          <a href="course.html">
+          <span>></span>
+          コース・料金</a>
+        </li>
+      </ul>
     </div>
 
     <!-- コース・料金 -->
     <section id="price">
       <div class="section-title price-title">
-        <h2 class="title-header"><span><img src="images/Head_02_DecoLeft16@3x.svg"></span>コース・料金<span><img
-              src="images/Head_02_DecoRight16@3x.svg"></span></h2>
+        <h2 class="title-header">
+          <span>
+            <img src="images/Head_02_DecoLeft16@3x.svg">
+          </span>コース・料金
+          <span>
+            <img src="images/Head_02_DecoRight16@3x.svg">
+          </span>
+        </h2>
         <h2 class="title-text">当院では保険診療、自費診療ともに<br>ご対応しております</h2>
       </div>
       <div class="price-container">
         <div class="insurance">
-          <img src="images/TOP-insurance1.png" alt="保険診療" class="corse-img">
+          <img src="images/top/TOP-insurance1.png" alt="保険診療" class="course-img">
           <h4>保険診療</h4>
           <ul>
             <li>・骨折・打撲・捻挫・脱臼</li>
@@ -97,7 +128,7 @@
           </ul>
         </div>
         <div class="self">
-          <img src="images/TOP-self1.png" alt="自費診療" class="corse-img">
+          <img src="images/top/TOP-self1.png" alt="自費診療" class="course-img">
           <h4>自費診療</h4>
           <ul>
             <li>・腰痛・肩こり</li>
@@ -110,7 +141,7 @@
 
     <!-- Insurance -->
     <section id="insurance">
-      <div class="container">
+      <div class="container reverse insurance-item">
         <div class="container-left">
           <div class="insurance-title">
             <h2>
@@ -121,7 +152,7 @@
             <h2 class="ja">保険診療</h2>
           </div>
           <div class="insurance-content">
-            <p>
+            <p class="pc-only">
               健康保険の適用は、慢性化していない、急性のけがのみが対象となります。<br>
               「負傷原因が急性または亜急性（急性に準ずる）の外傷性の負傷」のみです。
             </p>
@@ -133,7 +164,7 @@
           </div>
         </div>
         <div class="container-right">
-          <div  class="insurance-img">
+          <div class="insurance-img">
             <img src="images/price/Frame 2275.png" alt=”保険診療”>
           </div>
         </div>
@@ -142,7 +173,7 @@
 
     <!-- Self-pay -->
     <section id="insurance">
-      <div class="container">
+      <div class="container reverse insurance-item">
         <div class="container-left">
           <div class="insurance-title">
             <h2>
@@ -153,7 +184,7 @@
             <h2 class="ja">自費診療</h2>
           </div>
           <div class="insurance-content">
-            <p>
+            <p class="pc-only">
               慢性的なご症状、日常生活の疲労やご年齢により生じる痛み緩和の施術は健康保険の適用がなく、全額自己負担となります。
             </p>
             <ul>
@@ -245,8 +276,8 @@
           <ul class="footer-list">
             <li><a href="top.html">TOP</a></li>
             <li><a href="concept.html">当院について</a></li>
-            <li><a href="corse.html">コース・料金</a></li>
-            <li><a href="information.html">お知らせ</a></li>
+            <li><a href="course.html">コース・料金</a></li>
+            <li><a href="news.html">お知らせ</a></li>
             <li><a href="voice.html">お客様の声</a></li>
             <li><a href="contact.html">ご予約・お問い合わせ</a></li>
           </ul>
