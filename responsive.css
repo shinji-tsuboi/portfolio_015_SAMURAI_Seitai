@@ -6,8 +6,26 @@ sp menu
 
 /* SP用メニューボタン */
 
+/* オーバーレイのスタイル */
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  /* z-index: 999; */
+  display: none;
+}
+
+/* メニューが開いた際のオーバーレイの表示 */
+#nav-sp.open ~ #overlay {
+  display: block;
+}
+
 #menu-sp {
   position: absolute;
+  /* position: fixed; */
   top: 20px;
   right: 18px;
   z-index: 10;
@@ -15,13 +33,12 @@ sp menu
 }
 
 #nav-sp {
-  width: 320px;
+  width: 100%;
   background: #fff;
-  opacity: 0.9;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 10;
+  z-index: 100;
   display: none;
   transform: translateX(100%);
   transition: transform 0.5s ease;
@@ -44,6 +61,9 @@ sp menu
 }
 
 #close {
+  position: fixed;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
 }
 
@@ -214,6 +234,17 @@ top.html
     transform: rotate(2deg);
   }
 
+  .progress-bar {
+    width: 48px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    bottom: 110px;
+    right: 20px;
+    border-radius: 4px;
+    z-index: 1;
+  }
+
   /* お知らせ */
 
   #information {
@@ -350,7 +381,7 @@ top.html
   .voice-title {
     position: absolute;
     left: 50%;
-    top: 725px;
+    top: -35px;
     transform: translateX(-50%);
     z-index: 1;
   }
@@ -534,6 +565,11 @@ about.html
   .title-header {
     font-size: 18px;
     width: 100%;
+  }
+
+  .title-header span img {
+    width: 14px;
+    height: 16px;
   }
 
   .title-text {

@@ -33,15 +33,27 @@ $(function() {
 const menuButton = document.getElementById('menu-sp');
 const navMenu = document.getElementById('nav-sp');
 const closeButton = document.getElementById('close');
+const overlay = document.getElementById('overlay');
 
 // メニューボタンクリック時にメニューを表示
 menuButton.addEventListener('click', () => {
   navMenu.classList.add('open');
+  overlay.style.display = 'block';  //オーバーレイを表示
+  document.body.style.overflow = 'hidden';  // スクロール無効化
 });
 
 // クローズボタンクリック時にメニューを非表示
 closeButton.addEventListener('click', () => {
   navMenu.classList.remove('open');
+  overlay.style.display = 'none';  //オーバーレイを非表示
+  document.body.style.overflow = '';  // スクロール有効化
+});
+
+// オーバーレイをクリックしてメニューを閉じる機能
+overlay.addEventListener('click', () => {
+  navMenu.classList.remove('open');
+  overlay.style.display = 'none';
+  document.body.style.overflow = '';
 });
 
 // スライダー設定

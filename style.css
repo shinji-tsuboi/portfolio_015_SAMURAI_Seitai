@@ -64,7 +64,8 @@ Header
 -----------------------------*/
 
 #header {
-  position: absolute;
+  /* position: absolute; */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -73,12 +74,13 @@ Header
   justify-content: space-between;
   align-items: center;
   z-index: 10;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
 }
 
 .header-logo {
   width: 240px;
   flex-shrink: 0;
-  margin-left: 32px;
 }
 
 .logo-sp {
@@ -88,7 +90,6 @@ Header
 .nav-list {
   display: flex;
   align-items: center;
-  margin-right: 32px;
 }
 
 .nav-list li {
@@ -223,12 +224,12 @@ main {
 }
 
 .progress-bar {
-  width: 60px;
+  width: 90px;
   height: 6px;
   background: #fff;
   position: absolute;
   bottom: 70px;
-  right: 45px;
+  right: 35px;
   border-radius: 4px;
   z-index: 1;
 }
@@ -522,7 +523,7 @@ Voice
 .voice-title {
   position: absolute;
   left: 50%;
-  top: 265px;
+  top: -59px;
   transform: translateX(-50%);
   z-index: 1;
 }

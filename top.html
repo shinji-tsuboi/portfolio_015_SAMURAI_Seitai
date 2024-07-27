@@ -45,6 +45,7 @@
 
   <!-- スマホ用メニューボタン -->
   <img id="menu-sp" src="images/menu-sp/open.svg" alt="ナビゲーション">
+
   <!-- スマホ用ナビゲーション -->
   <nav id="nav-sp">
     <div class="nav-sp-header">
@@ -70,7 +71,10 @@
     </div>
   </nav>
 
-  <main>
+  <!-- グレーアウトオーバーレイ -->
+  <div id="overlay"></div>
+
+  <main id="main">
     <!-- メインビジュアル -->
     <div class="main-visual">
       <div class="top-text">
@@ -241,18 +245,19 @@
           <img src="images/top-sp/SP-Bottom-Carouselgroup3.png" alt="#">
         </div>
       </div>
-      <div class="semicircle"></div>
-      <div class="section-title voice-title">
-        <h2 class="title-header">
-          <span>
-            <img src="images/Head_02_DecoLeft16@3x.svg">
-          </span>お客様の声
-          <span>
-            <img src="images/Head_02_DecoRight16@3x.svg"></span>
+      <div class="semicircle">
+        <div class="section-title voice-title">
+          <h2 class="title-header">
+            <span>
+              <img src="images/Head_02_DecoLeft16@3x.svg">
+            </span>お客様の声
+            <span>
+              <img src="images/Head_02_DecoRight16@3x.svg"></span>
+            </h2>
+          <h2 class="title-text">
+            痛みの改善に加えて自分で予防も<br>できるようになりました
           </h2>
-        <h2 class="title-text">
-          痛みの改善に加えて自分で予防も<br>できるようになりました
-        </h2>
+        </div>
       </div>
       <div class="user">
         <div class="user-box">
@@ -373,7 +378,7 @@
   </footer>
 
   <!-- TOPページへ戻るボタン -->
-  <a href="#header" id="page-top">
+  <a href="#main" id="page-top">
     <img src="images/btn_01.png">
   </a>
 
