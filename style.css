@@ -919,17 +919,26 @@ Footer
   max-width: 976px;
   display: flex;
   gap: 32px;
-  margin: 0 auto;
+  justify-content: space-between;
+  margin: 0 auto 60px auto;
+  padding-top: 32px;
 }
 
 .topic-left {
-  width: 752px;
+  width: calc(752px - 32px);
+}
+.topic-right {
+  width: 160px;
 }
 
 .topic-item {
   display: flex;
   gap: 32px;
   margin-bottom: 64px;
+}
+
+.topic-item:last-child {
+  margin-bottom: 0;
 }
 
 .topic-img {
@@ -948,6 +957,42 @@ Footer
 
 .topic-content h3 {
   margin-bottom: 16px;
+}
+
+.pagination {
+  text-align: center;
+  margin-bottom: 193px;
+}
+
+.page-number {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  color: #468459;
+}
+
+.current-page {
+  background: #468459;
+  color: #fff;
+}
+
+.news-navigation {
+  display: flex;
+  margin: 0 auto 120px auto;
+  width: calc(752px - 32px);
+  gap: 32px;
+  align-items: center;
+}
+
+.news-navigation a {
+  display: flex;
+  align-items: center; /* 上下中央揃え */
+  text-decoration: none;
+}
+
+.arrow {
+  font-size: 14px;
+  padding: 0 5.5px;
 }
 
 /* Information */
