@@ -77,3 +77,12 @@ $(window).scroll(function () {
     $('#page-top').fadeOut();
   }
 });
+
+// セレクトタグの色を変更
+function Color(sample){
+  if( sample.value == 0 ){
+   sample.style.color = '#000000';
+  }else{
+   sample.style.color = '#0000005c';
+  }
+ }

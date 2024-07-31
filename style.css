@@ -710,8 +710,21 @@ Footer
 
 
 /*----------------------------
- 他のページ
+ 下層ページ
 -----------------------------*/
+
+.subpage #header {
+  position: static;
+}
+
+.subpage .nav-list li {
+  color: #468459;
+}
+
+.subpage .nav-btn a {
+  color: #fff;
+}
+
 
 .header-sp {
   position: relative;
@@ -789,7 +802,7 @@ Footer
   z-index: -1;
 }
 
-/* パンくすリスト */
+/* パンくずリスト */
 
 .breadrum {
   width: 100%;
@@ -803,6 +816,10 @@ Footer
   margin-left: 12%;
   font-size: 14px;
 }
+
+/*----------------------------
+ about.html
+-----------------------------*/
 
 /* flow */
 
@@ -915,6 +932,10 @@ Footer
 
 /* Topic */
 
+#topic {
+  padding: 0 12%;
+}
+
 .topic-container {
   max-width: 976px;
   display: flex;
@@ -981,6 +1002,7 @@ Footer
   margin: 0 auto 120px auto;
   width: calc(752px - 32px);
   gap: 32px;
+  justify-content: center;
   align-items: center;
 }
 
@@ -995,7 +1017,9 @@ Footer
   padding: 0 5.5px;
 }
 
-/* Information */
+/*----------------------------
+ news.html
+-----------------------------*/
 
 .category h3 {
   margin-bottom: 32px;
@@ -1023,11 +1047,14 @@ Footer
   margin-bottom: 24px;
 }
 
-/* Voice */
+/*----------------------------
+ voice.html
+-----------------------------*/
 
 .voice-list-inner {
   width: 868px;
   margin-left: 152px;
+  padding: 64px 0;
 }
 
 .voice-list-item {
@@ -1045,7 +1072,9 @@ Footer
   margin-bottom: 24px;
 }
 
-/* Contact */
+/*----------------------------
+ contact.html
+-----------------------------*/
 
 .contact-inner {
   width: 752px;
@@ -1112,6 +1141,10 @@ select {
   padding-left: 10px;
 }
 
+option {
+  padding-right: 20px;
+}
+
 .contact-textarea {
   width: 100%;
   height: 140px;
@@ -1128,7 +1161,32 @@ select {
   color: #aaa;
 }
 
-/* Contact-thanks */
+.worries {
+  position: relative;
+}
+
+.worries::after {
+  content: "";
+  position: absolute;
+  top: 55px;
+  right: 16px;
+  width: 12px;
+  height: 12px;
+  border-right: 2px solid #333;
+  border-bottom: 2px solid #333;
+  transform: rotate(45deg);
+  pointer-events: none;
+}
+
+select {
+  -webkit-appearance: none;
+  appearance: none;
+  color: #0000005C;
+}
+
+/*----------------------------
+ contact-thanks.html
+-----------------------------*/
 
 #contact-thanks {
   width: 100%;

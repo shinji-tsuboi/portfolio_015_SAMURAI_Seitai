@@ -424,6 +424,20 @@ top.html
     width: 100%;
   }
 
+  /* ニュース */
+
+  #topic {
+    padding: 0 5%;
+  }
+
+  .topic-left {
+    padding: 0;
+  }
+
+  .news-navigation {
+    margin: 0 auto 32px auto;
+  }
+
   /* アクセス・営業時間 */
 
   .access {

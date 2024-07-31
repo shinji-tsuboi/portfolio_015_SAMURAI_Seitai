@@ -21,28 +21,22 @@
   <title>SAMURAI整体院</title>
 </head>
 
-<body>
-  <header class="header-sp">
+<body class="subpage">
+  <header id="header">
     <h1 class="header-logo">
-      <a href="#header"><img src="images/header-logo.png" alt="SAMURAI整体院"></a>
+      <a href="top.html">
+        <img class="logo-pc" src="images/header-logo.png" alt="SAMURAI整体院">
+        <img class="logo-sp" src="images/menu-sp/logo-sp.svg" alt="SAMURAI整体院">
+      </a>
     </h1>
+    <!-- PC用ナビゲーション -->
     <nav class="header-nav">
       <ul class="nav-list">
-        <li class="nav-item">
-          <a href="top.html">ホーム</a>
-        </li>
-        <li class="nav-item">
-          <a href="about.html">当院について</a>
-        </li>
-        <li class="nav-item">
-          <a href="course.html">コース・料金</a>
-        </li>
-        <li class="nav-item">
-          <a href="news.html">お知らせ</a>
-        </li>
-        <li class="nav-item">
-          <a href="voice.html">お客様の声</a>
-        </li>
+        <li><a href="top.html">ホーム</a></li>
+        <li><a href="about.html">当院について</a></li>
+        <li><a href="course.html">コース・料金</a></li>
+        <li><a href="news.html">お知らせ</a></li>
+        <li><a href="voice.html">お客様の声</a></li>
         <li class="nav-btn">
           <a href="contact.html">ご予約・お問い合わせ</a>
         </li>
@@ -50,32 +44,35 @@
     </nav>
   </header>
 
-   <!-- スマホ用メニューボタン -->
-   <img id="menu-sp" src="images/menu-sp/open.svg" alt="ナビゲーション">
-   <!-- スマホ用ナビゲーション -->
-   <nav id="nav-sp">
-     <div class="nav-sp-header">
-       <div id="logo-sp">
-         <img src="images/menu-sp/logo-sp.svg" alt="ロゴ">
-       </div>
-       <div id="close">
-         <img src="images/menu-sp/close.svg" alt="閉じる">
-       </div>
-     </div>
-     <div class="nav-sp-list">
-       <div class="nav-sp-list-inner">
-         <h3>メニュー</h3>
-         <ul>
-           <li><a href="top.html">ホーム</a></li>
-           <li><a href="about.html">当院について</a></li>
-           <li><a href="course.html">コース・料金</a></li>
-           <li><a href="news.html">お知らせ</a></li>
-           <li><a href="voice.html">お客様の声</a></li>
-           <li class="nav-btn"><a href="contact.html">ご予約・お問い合わせ</a></li>
-         </ul>
-       </div>
-     </div>
-   </nav>
+  <!-- スマホ用メニューボタン -->
+  <img id="menu-sp" src="images/menu-sp/open.svg" alt="ナビゲーション">
+  <!-- スマホ用ナビゲーション -->
+  <nav id="nav-sp">
+    <div class="nav-sp-header">
+      <div id="logo-sp">
+        <img src="images/menu-sp/logo-sp.svg" alt="ロゴ">
+      </div>
+      <div id="close">
+        <img src="images/menu-sp/close.svg" alt="閉じる">
+      </div>
+    </div>
+    <div class="nav-sp-list">
+      <div class="nav-sp-list-inner">
+        <h3>メニュー</h3>
+        <ul>
+          <li><a href="top.html">ホーム</a></li>
+          <li><a href="about.html">当院について</a></li>
+          <li><a href="course.html">コース・料金</a></li>
+          <li><a href="news.html">お知らせ</a></li>
+          <li><a href="voice.html">お客様の声</a></li>
+          <li class="nav-btn"><a href="contact.html">ご予約・お問い合わせ</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- グレーアウトオーバーレイ -->
+  <div id="overlay"></div>
 
   <main id="main">
     <!-- メインビジュアル -->
@@ -98,8 +95,8 @@
         </li>
         <li class="page-map__contact">
           <a href="contact.html">
-          <span>></span>
-          ご予約・お問合せ</a>
+            <span>></span>
+            ご予約・お問合せ</a>
         </li>
       </ul>
     </div>
@@ -168,11 +165,11 @@
             </div>
           </div>
           <!-- お悩み -->
-          <div class="form-area">
+          <div class="form-area worries">
             <div class="contact-heading">
               <label class="contact-label">お悩み（必須）</label>
             </div>
-            <select name="worries" class="input-area">
+            <select name="worries" class="input-area" onchange="Color(this)" required>
               <option value="selected">お悩みを選択して下さい</option>
               <option value="">腰痛・肩こり</option>
               <option value="">冷え性・だるさ</option>
