@@ -1,3 +1,12 @@
+/*
++Theme Name: SAMURAI CHIROPRACTIC
++Theme URI: https://example.com/
++Description: SAMURAI整体院のWordPressテーマ
++Version: 1.0.0
++Author: 坪井真次
++Author URI: https://www.sejuku.net/
+*/
+
 @charset "utf-8";
 
 /*----------------------------
@@ -319,6 +328,7 @@ main {
   }
 
   .top-carousel {
+    height: 320px;
     display: none;
   }
 
@@ -408,7 +418,7 @@ main {
   align-items: baseline;
 }
 
-.business-hours {
+.business-hours-top {
   display: flex;
   align-items: flex-end;
   white-space: nowrap;
@@ -1164,7 +1174,7 @@ main {
 
 /* パンくずリスト */
 
-.breadrum {
+.breadcrumb {
   width: 100%;
   height: 64px;
   align-items: center;
@@ -1456,8 +1466,9 @@ main {
 }
 
 .pagination {
+  display: flex;
   text-align: center;
-  margin-bottom: 193px;
+  margin: 0 auto;
   grid-area: 2 / 1 / 3 / 3;
 }
 
@@ -1490,13 +1501,18 @@ main {
 }
 
 .page-number {
-  display: inline-block;
   width: 24px;
   height: 24px;
   color: #468459;
+  gap: 2px;
 }
 
-.current-page {
+.pagination .page-numbers {
+  display: inline-block;
+  padding: 0 7px;
+}
+
+.pagination .page-numbers.current {
   background: #468459;
   color: #fff;
 }
@@ -1622,16 +1638,23 @@ main {
 .voice-list-inner {
   width: 868px;
   margin-left: 152px;
-  padding: 64px 0;
+  padding: 64px 0 0;
 }
 
 .voice-list-item {
   display: flex;
+  height: 180px;
+  margin-bottom: 64px;
 }
 
 .voice-list-img {
   width: 180px;
+  height: 180px;
   margin-right: 48px;
+}
+
+.voice-list-img img {
+  border-radius: 50%;
 }
 
 .user-name {
@@ -1650,6 +1673,7 @@ main {
   .voice-list-item {
     flex-direction: column;
     width: 100%;
+    height: auto;
     margin-bottom: 48px;
   }
 
@@ -1659,8 +1683,7 @@ main {
   }
 
   .voice-list-img {
-    width: 215px;
-    margin: 0 auto;
+    margin: 0 auto 18px auto;
   }
 
   .user-name {
